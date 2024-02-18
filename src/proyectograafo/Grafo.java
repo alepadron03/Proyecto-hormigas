@@ -67,7 +67,7 @@ public class Grafo {
            while(aux.dato.toString() != dato.toString()){
                aux = aux.siguiente;
            }
-           aux.
+           //aux.
         }
     }
 }
