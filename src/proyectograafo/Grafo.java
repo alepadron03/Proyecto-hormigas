@@ -10,8 +10,8 @@ package proyectograafo;
  * <code>Esencialmente este es el constructor del grafo de por si</code>
  */
 public class Grafo {
-    private Ciudad primero;
-    private Ciudad ultimo;
+    public Ciudad primero;
+    public Ciudad ultimo;
     public int cantidad;
     
     public Grafo(){
@@ -33,7 +33,7 @@ public class Grafo {
         return existe;
     }
     
-     public void nuevoCamino(Object origen, Object destino, float distancia){
+    public void nuevoCamino(Object origen, Object destino, float distancia){
         if(existeCiudad(origen) && existeCiudad(destino)){
             Ciudad posicion = primero;
             while(!posicion.dato.equals(origen.toString())){
@@ -48,7 +48,7 @@ public class Grafo {
         }
     }
      
-     public void nuevaCiudad(Object dato){
+    public void nuevaCiudad(Object dato){
         if(!existeCiudad(dato)){
             Ciudad nodo = new Ciudad(dato);
             if(this.cantidad == 0){
@@ -76,23 +76,23 @@ public class Grafo {
                this.ultimo = null;
                this.cantidad--;
             }else{
-               Ciudad aux = this.primero;
-               Ciudad aux2 = null;
+                Ciudad aux = this.primero;
+                Ciudad aux2 = null;
 
                 while(aux.siguiente != null && (!aux.dato.toString().equals(dato.toString()))){
                    aux2 = aux;
                    aux = aux.siguiente;
                 }
                
-               if (aux == this.primero){
+                if (aux == this.primero){
                    this.primero = this.primero.siguiente;
                    aux.siguiente = null;
                    this.cantidad--;
-               }else if(aux == this.ultimo){
+                }else if(aux == this.ultimo){
                    aux2.siguiente = null;
                    this.ultimo = aux2;
                    this.cantidad--;
-               }else{
+                }else{
                    aux2.siguiente = aux.siguiente;
                    aux.siguiente = null;
                    this.cantidad--;

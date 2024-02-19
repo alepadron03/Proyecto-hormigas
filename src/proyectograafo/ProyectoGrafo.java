@@ -15,7 +15,7 @@ public class ProyectoGrafo {
      */
     public static void main(String[] args) {
         
-        new InterfazGrafoPrueba().setVisible(true);
+       new InterfazPrueba().setVisible(true);
     }
     
 }
