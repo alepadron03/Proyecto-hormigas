@@ -7,14 +7,25 @@ package GUI;
 /**
  *
  * @author joseg
+ * 
  */
+
 public class ventanaEliminar extends javax.swing.JFrame {
+    /**
+     * Desde la ventana eliminar se declara variable vEliminar,
+     */
+    
+    public static Menu1AgregarEliminarCargarIniciar vEliminar;
 
     /**
      * Creates new form ventanaAgregar
      */
-    public ventanaEliminar() {
+    public ventanaEliminar(Menu1AgregarEliminarCargarIniciar vEliminar) {
         initComponents();
+        this.vEliminar=vEliminar;
+        vEliminar.setVisible(false);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,16 +38,18 @@ public class ventanaEliminar extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         elegirHormigasCiudades = new javax.swing.JComboBox<>();
         númeroCiudadesHormigas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton3 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        volverMenu1eliminar = new javax.swing.JButton();
 
         jButton2.setText("Volver a menu");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,14 +73,13 @@ public class ventanaEliminar extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 90));
 
-        jButton3.setText("Volver a menu");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, -110, 720, 510));
+        volverMenu1eliminar.setText("Volver a menu");
+        volverMenu1eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverMenu1eliminarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(volverMenu1eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,6 +87,17 @@ public class ventanaEliminar extends javax.swing.JFrame {
     private void elegirHormigasCiudadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elegirHormigasCiudadesActionPerformed
 
     }//GEN-LAST:event_elegirHormigasCiudadesActionPerformed
+
+    private void volverMenu1eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1eliminarActionPerformed
+this.toBack();
+setVisible(false); /**
+ * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+ */
+new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+/**
+ * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+ */
+    }//GEN-LAST:event_volverMenu1eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,7 +130,7 @@ public class ventanaEliminar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ventanaEliminar().setVisible(true);
+                new ventanaEliminar(vEliminar).setVisible(true);
             }
         });
     }
@@ -116,11 +139,10 @@ public class ventanaEliminar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> elegirHormigasCiudades;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField númeroCiudadesHormigas;
+    private javax.swing.JButton volverMenu1eliminar;
     // End of variables declaration//GEN-END:variables
 }

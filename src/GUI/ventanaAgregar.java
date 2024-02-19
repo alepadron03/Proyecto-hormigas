@@ -23,6 +23,7 @@ public class ventanaAgregar extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,9 +39,8 @@ public class ventanaAgregar extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        volverMenu1agregar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,38 +64,15 @@ public class ventanaAgregar extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 90));
 
-        jButton2.setText("Volver a menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        volverMenu1agregar.setText("Volver a menu");
+        volverMenu1agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                volverMenu1agregarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        getContentPane().add(volverMenu1agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1121, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1920, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 480, 340));
 
         pack();
@@ -105,9 +82,16 @@ public class ventanaAgregar extends javax.swing.JFrame {
 
     }//GEN-LAST:event_elegirHormigasCiudadesActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void volverMenu1agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1agregarActionPerformed
+this.toBack();
+setVisible(false); /**
+ * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+ */
+new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+/**
+ * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+ */
+    }//GEN-LAST:event_volverMenu1agregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,11 +131,10 @@ public class ventanaAgregar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> elegirHormigasCiudades;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField númeroCiudadesHormigas;
+    private javax.swing.JButton volverMenu1agregar;
     // End of variables declaration//GEN-END:variables
 }

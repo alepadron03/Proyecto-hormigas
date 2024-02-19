@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
+import GUI.Menu2IntroducirCiclosHormigas;
 
 /**
  *
@@ -99,9 +100,9 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
         });
         jPanel1.add(verGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 140, 210));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/ANT CARD sunset.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-360, -40, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 560, 370));
 
@@ -109,11 +110,15 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cargarGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarGrafomenu1ActionPerformed
-        // TODO add your handling code here:
+ventanaCargararchivo vCargararchivo=new ventanaCargararchivo(this);
+vCargararchivo.setVisible(true);
+this.toFront();
     }//GEN-LAST:event_cargarGrafomenu1ActionPerformed
 
     private void iniciarSimulaciónmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulaciónmenu1ActionPerformed
-        // TODO add your handling code here:
+Menu2IntroducirCiclosHormigas vMenu2=new Menu2IntroducirCiclosHormigas(Menu2IntroducirCiclosHormigas vMenu2);
+vMenu2.setVisible(true);
+this.toFront();
     }//GEN-LAST:event_iniciarSimulaciónmenu1ActionPerformed
 
     private void verGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGrafomenu1ActionPerformed
@@ -123,9 +128,15 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
     private void agregarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarElementosmenu1ActionPerformed
 
         ventanaAgregar vAgregar=new ventanaAgregar(this);
+        vAgregar.setVisible(true);
+        this.toFront();
     }//GEN-LAST:event_agregarElementosmenu1ActionPerformed
 
     private void eliminarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarElementosmenu1ActionPerformed
+    
+    ventanaEliminar vEliminar=new ventanaEliminar(this);
+    vEliminar.setVisible(true);
+    this.toFront();
     }//GEN-LAST:event_eliminarElementosmenu1ActionPerformed
 
     /**
