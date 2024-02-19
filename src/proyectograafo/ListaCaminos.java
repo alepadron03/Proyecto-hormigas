@@ -43,6 +43,7 @@ public class ListaCaminos {
         if(!existenciaCamino(destino)){
             Camino nodo = new Camino(destino, distancia);
             creador(nodo, distancia);
+            
         }
     }
     
@@ -50,19 +51,64 @@ public class ListaCaminos {
         if(this.cantidad == 0){
             this.primero = nodo;
             this.ultimo = nodo;
+            this.cantidad++;
         }else if (destino.toString().compareTo(this.primero.destino.toString()) <= 0){
             nodo.siguiente = this.primero;
             this.primero = nodo;
+            this.cantidad++;
         }else if(destino.toString().compareTo(this.ultimo.destino.toString()) >= 0){
             this.ultimo.siguiente = nodo;
             this.ultimo = nodo;
+            this.cantidad++;
         }else{
             Camino posicion = this.primero;
             while(destino.toString().compareTo(posicion.destino.toString()) < 0){
                 posicion = posicion.siguiente;
             nodo.siguiente = posicion.siguiente;
             posicion.siguiente = nodo;
+            this.cantidad++;
             }
         }
+    }
+    
+    public void eliminarCamino(Object destino){
+        if(existenciaCamino(destino)){
+            if(this.cantidad == 1){
+                this.primero = null;
+                this.ultimo = null;
+                this.cantidad--;          
+            }else{
+                Camino aux = this.primero;
+                Camino aux2 = null;
+                
+                while(aux.siguiente != null && (!aux.destino.toString().equals(destino.toString()))){
+                    aux2 = aux;
+                    aux = aux.siguiente;
+                    }
+                if(aux == this.primero){
+                    this.primero = this.primero.siguiente;
+                    aux.siguiente = null;
+                    this.cantidad--;
+                }else if(aux == this.ultimo){
+                    aux2.siguiente = null;
+                    this.ultimo = aux2;
+                    this.cantidad--;
+                }else{
+                    aux2.siguiente = aux.siguiente;
+                    aux.siguiente = null;
+                    this.cantidad--;       
+                }
+            }
+        }
+    }
+    
+    public String toString(){
+        String cadena ="";
+        Camino aux = primero;
+        while (aux != null){
+            cadena = cadena+aux.destino.toString()+","+String.valueOf(aux.distancia)+" ; ";
+            aux = aux.siguiente;
+        }
+        return cadena;
     }
 }

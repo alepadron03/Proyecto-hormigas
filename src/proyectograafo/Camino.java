@@ -17,11 +17,28 @@ public class Camino {
     
     Object destino;
     float distancia;
+    float feromonas;
     Camino siguiente;
     
     public Camino(Object destino, float distancia){
         this.destino = destino;
         this.distancia = distancia;
         this.siguiente = null;        
+    }
+
+    public Object getDestino() {
+        return destino;
+    }
+
+    public float getDistancia() {
+        return distancia;
+    }
+
+    public float getFeromonas() {
+        return feromonas;
+    }
+
+    public Camino getSiguiente() {
+        return siguiente;
     }
 }
