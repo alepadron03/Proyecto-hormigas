@@ -10,11 +10,11 @@ package GUI;
  */
 public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     
-    public static Menu2IntroducirCiclosHormigas vMenu2; 
+    public static Menu1AgregarEliminarCargarIniciar vMenu2; 
     /**
      * Creates new form Menu2IntroducirCiclosHormigas
      */
-    public Menu2IntroducirCiclosHormigas(Menu2IntroducirCiclosHormigas vMenu2) {
+    public Menu2IntroducirCiclosHormigas(Menu1AgregarEliminarCargarIniciar vMenu2) {
         initComponents();
         this.vMenu2=vMenu2;
         vMenu2.setVisible(false);

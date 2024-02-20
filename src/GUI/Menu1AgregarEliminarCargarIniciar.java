@@ -116,8 +116,8 @@ this.toFront();
     }//GEN-LAST:event_cargarGrafomenu1ActionPerformed
 
     private void iniciarSimulaciónmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulaciónmenu1ActionPerformed
-Menu2IntroducirCiclosHormigas vMenu2=new Menu2IntroducirCiclosHormigas(Menu2IntroducirCiclosHormigas vMenu2);
-vMenu2.setVisible(true);
+Menu2IntroducirCiclosHormigas vMenu2=new Menu2IntroducirCiclosHormigas(this);
+vMenu2.setVisible(true); //hola
 this.toFront();
     }//GEN-LAST:event_iniciarSimulaciónmenu1ActionPerformed
 
