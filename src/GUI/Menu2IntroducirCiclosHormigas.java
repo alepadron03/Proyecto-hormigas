@@ -1,8 +1,14 @@
+package GUI;
+
+package GUI;
+import GUI.Menu1AgregarEliminarCargarIniciar;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package GUI;
+
+
 
 /**
  *
@@ -10,11 +16,11 @@ package GUI;
  */
 public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     
-    public static Menu2IntroducirCiclosHormigas vMenu2; 
+    public static Menu1AgregarEliminarCargarIniciar vMenu2; 
     /**
      * Creates new form Menu2IntroducirCiclosHormigas
      */
-    public Menu2IntroducirCiclosHormigas(Menu2IntroducirCiclosHormigas vMenu2) {
+    public Menu2IntroducirCiclosHormigas(Menu1AgregarEliminarCargarIniciar vMenu2) {
         initComponents();
         this.vMenu2=vMenu2;
         vMenu2.setVisible(false);
@@ -153,7 +159,7 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
                 entrarNumerohormigasmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(entrarNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 200, -1));
+        jPanel1.add(entrarNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 200, -1));
 
         jLabel12.setText("Parametros obligatorios");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
@@ -167,9 +173,15 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
                 entrarNumerodeciclosmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(entrarNumerodeciclosmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
-        jPanel1.add(escribirNumerodeciclosmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 40, -1));
-        jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 40, -1));
+        jPanel1.add(entrarNumerodeciclosmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
+        jPanel1.add(escribirNumerodeciclosmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 40, -1));
+
+        escribirNumerohormigasmenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                escribirNumerohormigasmenu2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 40, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -30, 650, 410));
 
@@ -201,7 +213,7 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void entrarNumerohormigasmenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarNumerohormigasmenu2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_entrarNumerohormigasmenu2ActionPerformed
 
     private void entrarParametrobetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarParametrobetaActionPerformed
@@ -213,12 +225,17 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     }//GEN-LAST:event_entrarParametroalfaActionPerformed
 
     private void entrarNumerodeciclosmenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarNumerodeciclosmenu2ActionPerformed
-        // TODO add your handling code here:
+    
+}
     }//GEN-LAST:event_entrarNumerodeciclosmenu2ActionPerformed
 
     private void Agregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Agregar2ActionPerformed
+
+    private void escribirNumerohormigasmenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escribirNumerohormigasmenu2ActionPerformed
+ 
+    }//GEN-LAST:event_escribirNumerohormigasmenu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,4 +304,4 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton volverMenu1menu2;
     // End of variables declaration//GEN-END:variables
-}
+
