@@ -52,12 +52,6 @@ public class ventanaAgregar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(elegirHormigasCiudades, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 130, -1));
-
-        númeroCiudadesHormigas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                númeroCiudadesHormigasActionPerformed(evt);
-            }
-        });
         getContentPane().add(númeroCiudadesHormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 110, 23));
 
         jButton1.setText("Agregar");
@@ -98,10 +92,6 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */
     }//GEN-LAST:event_volverMenu1agregarActionPerformed
-
-    private void númeroCiudadesHormigasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_númeroCiudadesHormigasActionPerformed
-        
-    }//GEN-LAST:event_númeroCiudadesHormigasActionPerformed
 
     /**
      * @param args the command line arguments
