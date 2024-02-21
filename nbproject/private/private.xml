@@ -3,15 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/AAAAAAAAaa.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/Imágenes/fondoPantalla.jpg</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ProyectoGrafo.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyecto/hormigas/ProyectoHormigas.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Grafo.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Ciudad.java</file>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Camino.java</file>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/holabuenosidas.java</file>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyecto/hormigas/ProyectoHormigas.java</file>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyecto/hormigas/VerticeCiudad.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/Grafo.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/InterfazGrafoPrueba.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/Menu3FinalizarGrafoGuardar.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/InterfazPrueba.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/NodoGrafo.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/Arco.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ListaCaminos.java</file>
-            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ProyectoGrafo.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/Imágenes/verGrafo1.png</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ActualizaciónSimulacion.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyecto/hormigas/VerticeCiudad.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/GrafosInterfaz.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/grafos/ListaAdyacencia.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/Menu2IntroducirCiclosHormigas.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Camino.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Hormiga.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/Menu1AgregarEliminarCargarIniciar.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/ventanaAgregar.java</file>
+            <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ImportaArchivo.java</file>
         </group>
     </open-files>
 </project-private>
