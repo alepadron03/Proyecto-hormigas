@@ -1,0 +1,4 @@
+Esta carpeta tiene la finalidad de:
+-Incluir primitivas utilizadas en la obtención de datos de interfaz
+-Almacenar datos de la interfaz
+-Transportar los datos entre interfaces
