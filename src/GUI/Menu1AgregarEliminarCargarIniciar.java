@@ -11,13 +11,15 @@ import GUI.Menu2IntroducirCiclosHormigas;
  */
 public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
     
+    public static Menu1AgregarEliminarCargarIniciar vMenu1;
     /**
      * Creates new form menuAgregarEliminarCargarIniciar
      */
     public Menu1AgregarEliminarCargarIniciar() {
         initComponents(); 
-        
+        this.vMenu1=vMenu1;
         this.setVisible(true); //para que se vea
+        
         /*
         this.dispose para borrar una vista
         

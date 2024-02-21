@@ -55,6 +55,11 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         getContentPane().add(verValordecadacaminomenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         volverMenu1menu3.setText("Volver a menu");
+        volverMenu1menu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverMenu1menu3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(volverMenu1menu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,6 +101,17 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
     private void verGradomenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGradomenu3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_verGradomenu3ActionPerformed
+
+    private void volverMenu1menu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menu3ActionPerformed
+  this.toBack();
+setVisible(false); /**
+ * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+ */
+new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+/**
+ * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+ */
+    }//GEN-LAST:event_volverMenu1menu3ActionPerformed
 
     /**
      * @param args the command line arguments

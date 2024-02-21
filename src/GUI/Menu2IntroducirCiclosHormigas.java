@@ -122,9 +122,19 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         volverMenu1menu2.setText("Volver a menu");
+        volverMenu1menu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverMenu1menu2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(volverMenu1menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         iniciarViajemenu2.setText("Iniciar viaje");
+        iniciarViajemenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarViajemenu2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(iniciarViajemenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -219,6 +229,21 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     private void Agregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Agregar2ActionPerformed
+
+    private void iniciarViajemenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarViajemenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iniciarViajemenu2ActionPerformed
+
+    private void volverMenu1menu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menu2ActionPerformed
+     this.toBack();
+setVisible(false); /**
+ * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+ */
+new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+/**
+ * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+ */
+    }//GEN-LAST:event_volverMenu1menu2ActionPerformed
 
     /**
      * @param args the command line arguments
