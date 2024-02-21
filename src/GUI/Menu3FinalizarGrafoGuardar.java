@@ -54,6 +54,7 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         verValordecadacaminomenu3.setText("Valor de cada camino");
         getContentPane().add(verValordecadacaminomenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
+
         volverMenu1menu3.setText("Volver a menu");
         volverMenu1menu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +62,7 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(volverMenu1menu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -112,6 +114,10 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */
     }//GEN-LAST:event_volverMenu1menu3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

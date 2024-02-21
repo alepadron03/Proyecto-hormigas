@@ -4,11 +4,13 @@
  */
 package GUI;
 
+import java.util.Locale;
+
 /**
  *
  * @author joseg
  */
-public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
+public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {\
     
     public static Menu1AgregarEliminarCargarIniciar vMenu2; 
     /**
@@ -181,7 +183,9 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         jPanel1.add(escribirNumerodeciclosmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 40, -1));
         jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 40, -1));
 
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -30, 650, 410));
+
 
         Agregar2.setText("Introducir número de ciclos");
         Agregar2.addActionListener(new java.awt.event.ActionListener() {
@@ -245,6 +249,12 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
  */
     }//GEN-LAST:event_volverMenu1menu2ActionPerformed
 
+    private void Volvermenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volvermenu1ActionPerformed
+        this.setVisible(false);
+        m1.setVisible(true);
+        
+    }//GEN-LAST:event_Volvermenu1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -275,7 +285,9 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+
                 new Menu2IntroducirCiclosHormigas(vMenu2).setVisible(true);
+
             }
         });
     }

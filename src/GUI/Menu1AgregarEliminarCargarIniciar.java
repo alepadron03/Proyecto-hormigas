@@ -46,6 +46,7 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
         eliminarElementosmenu1 = new javax.swing.JButton();
         agregarElementosmenu1 = new javax.swing.JButton();
         verGrafomenu1 = new javax.swing.JButton();
+        SalirMenu1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jEditorPane1);
@@ -103,6 +104,16 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
         jPanel1.add(verGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 140, 210));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/ANT CARD sunset.jpg"))); // NOI18N
+        SalirMenu1.setText("Salir");
+        SalirMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirMenu1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SalirMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
+
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-360, -40, -1, -1));
 
@@ -141,6 +152,10 @@ this.toFront();
     this.toFront();
     }//GEN-LAST:event_eliminarElementosmenu1ActionPerformed
 
+    private void SalirMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMenu1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_SalirMenu1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,6 +193,7 @@ this.toFront();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton SalirMenu1;
     private javax.swing.JButton agregarElementosmenu1;
     private javax.swing.JButton cargarGrafomenu1;
     private javax.swing.JButton eliminarElementosmenu1;

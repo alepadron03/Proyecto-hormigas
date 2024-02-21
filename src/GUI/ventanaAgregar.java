@@ -39,8 +39,9 @@ public class ventanaAgregar extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+
         volverMenu1agregar = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,6 +65,7 @@ public class ventanaAgregar extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 90));
 
+
         volverMenu1agregar.setText("Volver a menu");
         volverMenu1agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +84,7 @@ public class ventanaAgregar extends javax.swing.JFrame {
 
     }//GEN-LAST:event_elegirHormigasCiudadesActionPerformed
 
+
     private void volverMenu1agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1agregarActionPerformed
 this.toBack();
 setVisible(false); /**
@@ -92,6 +95,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */
     }//GEN-LAST:event_volverMenu1agregarActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -129,6 +133,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Volvermenu1;
     private javax.swing.JComboBox<String> elegirHormigasCiudades;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
