@@ -26,14 +26,21 @@ public class Camino {
         this.siguiente = null;        
     }
 
+  
     public Object getDestino() {
         return destino;
     }
 
+    /**
+     * @return distancia
+     */
     public float getDistancia() {
         return distancia;
     }
-
+    
+    /**
+     * @return feromonas
+     */
     public float getFeromonas() {
         return feromonas;
     }

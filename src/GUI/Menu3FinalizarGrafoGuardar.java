@@ -4,17 +4,30 @@
  */
 package GUI;
 
+import GUI.valoresInterfaz.ListaSimple;
+import GUI.valoresInterfaz.valoresGuardados;
+import java.util.Locale;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import GUI.Menu2IntroducirCiclosHormigas.*;
 /**
  *
  * @author joseg
  */
 public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
-
+    
+    
+    public static Menu2IntroducirCiclosHormigas vMenu3;
     /**
      * Creates new form Menu3FinalizarGrafoGuardar
      */
-    public Menu3FinalizarGrafoGuardar() {
+    public Menu3FinalizarGrafoGuardar(Menu2IntroducirCiclosHormigas vMenu3) {
         initComponents();
+        this.vMenu3=vMenu3;
+        vMenu3.setVisible(false);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -149,7 +162,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu3FinalizarGrafoGuardar().setVisible(true);
+                new Menu3FinalizarGrafoGuardar(vMenu3).setVisible(true);
             }
         });
     }
