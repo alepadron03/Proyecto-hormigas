@@ -20,6 +20,7 @@ public class ventanaAgregar extends javax.swing.JFrame {
         this.vAgregar=vAgregar;
         vAgregar.setVisible(false);
         this.setVisible(true);
+        getContentPane().add(this);
         this.setLocationRelativeTo(null);
         
     }

@@ -34,7 +34,7 @@ public class ListaSimple {
     
     }
     
-    public void buscarultimo(int dato, int pos){ //
+    public void buscarPosicion(int dato, int pos){ //
         int contador=1;
         nodo nuevo = new nodo(dato);
         nodo aux=this.primero;
@@ -42,7 +42,6 @@ public class ListaSimple {
             aux=aux.siguiente;
         }
         aux.siguiente = nuevo;
-        
         
         if(pos > 0){
             aux = this.primero;
@@ -54,6 +53,17 @@ public class ListaSimple {
             nuevo.siguiente=aux; //aqui ya decimos que el aux apunta hacia el nuevo.
         }
          //
+    }
+    
+    public String buscarUltimoString(){
+        nodo aux=this.primero;
+        if(this.primero!=null){
+            while(aux.siguiente!=null){
+                aux=aux.siguiente;
+            }
+        return aux.toString();    
+        }
+        return null;
     }
     
     public void iniciarYeliminar(){ //esto es para eliminar toda la lista 
@@ -116,8 +126,14 @@ public class ListaSimple {
        
    }
     
-    
-    
+   public void insertarfinal(int dato){
+        nodo ultimo=new nodo(dato);
+        this.primero.siguiente=ultimo;
+   }
+    /**
+     *
+     * @return
+     */
     public String imprimirListas(){
         String listastring="";
         nodo aux=this.primero;

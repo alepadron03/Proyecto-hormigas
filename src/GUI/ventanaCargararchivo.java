@@ -45,6 +45,7 @@ public class ventanaCargararchivo extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         displayContenidotxt = new javax.swing.JTextArea();
         volverMenu1cargar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,6 +75,9 @@ public class ventanaCargararchivo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(volverMenu1cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+
+        jButton1.setText("Convertir a grafo");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -180,6 +184,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
     private javax.swing.JButton buscarTxt;
     private javax.swing.JTextField displayArchivotxt;
     private javax.swing.JTextArea displayContenidotxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton volverMenu1cargar;

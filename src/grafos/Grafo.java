@@ -12,29 +12,42 @@ public class Grafo {
     private NodoGrafo primero;
     private NodoGrafo ultimo;
     
+    /**
+     * JavaDoc José
+     * 
+     * Grafo es inicializado vacío
+     */
     public Grafo(){
         this.primero = null;
         this.ultimo = null;
     }
-    
+    //Comprueba si el primero es null
     private boolean isEmpty(){
         return primero == null;
     }
-    
+    /**
+     * 
+     * @param dato
+     * @return regresa si existe un vertice
+     */
     public boolean existeVertice(Object dato){
         boolean existe = false;
-        if(!isEmpty()){
-            NodoGrafo aux = primero;
-            while(aux != null && !existe){
-                if(aux.dato.toString().equals(dato.toString())){
-                    existe = true;
+        if(!isEmpty()){ //si no esta vacío
+            NodoGrafo aux = primero; //el nodo aux va a ser el primero
+            while(aux != null && !existe){ //mientras que aux exista
+                if(aux.dato.toString().equals(dato.toString())){ //Si el dato del aux, convertido en string es igual al dato string de parametro
+                    existe = true; //se comprueba que existe
                 }
-                aux = aux.siguiente;
+                aux = aux.siguiente; //si no se cumple, se va para la siguiente
             }
         }
         return existe;
     }
-    
+    /**
+     * @param origen 
+     * @param destino 
+     * @param destino 
+     */
     public void nuevaArista(Object origen, Object destino){
         if(existeVertice(origen) && existeVertice(destino)){
             NodoGrafo posicion=primero;
