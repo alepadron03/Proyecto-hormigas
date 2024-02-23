@@ -4,17 +4,30 @@
  */
 package GUI;
 
+import GUI.valoresInterfaz.ListaSimple;
+import GUI.valoresInterfaz.valoresGuardados;
+import java.util.Locale;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import GUI.Menu2IntroducirCiclosHormigas.*;
 /**
  *
  * @author joseg
  */
 public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
-
+    
+    
+    public static Menu2IntroducirCiclosHormigas vMenu3;
     /**
      * Creates new form Menu3FinalizarGrafoGuardar
      */
-    public Menu3FinalizarGrafoGuardar() {
+    public Menu3FinalizarGrafoGuardar(Menu2IntroducirCiclosHormigas vMenu3) {
         initComponents();
+        this.vMenu3=vMenu3;
+        vMenu3.setVisible(false);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -28,16 +41,15 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
 
         verGrafo = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        verValordecadacaminomenu3 = new javax.swing.JButton();
+        volverMenu1menu3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        verGrafomenu1 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        jButton2 = new javax.swing.JButton();
+        verGradomenu3 = new javax.swing.JButton();
+        escogerHormigaoptimomenu3 = new javax.swing.JSpinner();
+        verHormigaoptimamenu3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         verGrafo.setText("Ver grafo");
         verGrafo.addActionListener(new java.awt.event.ActionListener() {
@@ -52,31 +64,33 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         jLabel4.setText("Recorrido óptimo hormiga");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 100, 170, -1));
 
-        jButton3.setText("Valor de cada camino");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        verValordecadacaminomenu3.setText("Valor de cada camino");
+        getContentPane().add(verValordecadacaminomenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        jButton4.setText("Volver a menu");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+
+        volverMenu1menu3.setText("Volver a menu");
+        volverMenu1menu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                volverMenu1menu3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+        getContentPane().add(volverMenu1menu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        verGrafomenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/verGrafo1.png"))); // NOI18N
-        verGrafomenu1.setText("Ver grafo");
-        verGrafomenu1.addActionListener(new java.awt.event.ActionListener() {
+        verGradomenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/verGrafo1.png"))); // NOI18N
+        verGradomenu3.setText("Ver grafo");
+        verGradomenu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verGrafomenu1ActionPerformed(evt);
+                verGradomenu3ActionPerformed(evt);
             }
         });
-        jPanel1.add(verGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 140, 210));
-        jPanel1.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
+        jPanel1.add(verGradomenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 140, 210));
+        jPanel1.add(escogerHormigaoptimomenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
 
-        jButton2.setText("Ver");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 64, -1));
+        verHormigaoptimamenu3.setText("Ver");
+        jPanel1.add(verHormigaoptimamenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 64, -1));
 
         jLabel1.setText("Para estadísticas, oprimir botón de la estadística y posteriori \"ver grafo\".");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 450, -1));
@@ -90,10 +104,6 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         jLabel3.setText("Resultados");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/solid-dark-grey-gkwp0pxxcrd3lkaw.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -20, 620, 480));
 
         pack();
@@ -103,9 +113,20 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_verGrafoActionPerformed
 
-    private void verGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGrafomenu1ActionPerformed
+    private void verGradomenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGradomenu3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_verGrafomenu1ActionPerformed
+    }//GEN-LAST:event_verGradomenu3ActionPerformed
+
+    private void volverMenu1menu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menu3ActionPerformed
+  this.toBack();
+setVisible(false); /**
+ * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+ */
+new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+/**
+ * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+ */
+    }//GEN-LAST:event_volverMenu1menu3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -141,23 +162,22 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu3FinalizarGrafoGuardar().setVisible(true);
+                new Menu3FinalizarGrafoGuardar(vMenu3).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JSpinner escogerHormigaoptimomenu3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JButton verGradomenu3;
     private javax.swing.JButton verGrafo;
-    private javax.swing.JButton verGrafomenu1;
+    private javax.swing.JButton verHormigaoptimamenu3;
+    private javax.swing.JButton verValordecadacaminomenu3;
+    private javax.swing.JButton volverMenu1menu3;
     // End of variables declaration//GEN-END:variables
 }
