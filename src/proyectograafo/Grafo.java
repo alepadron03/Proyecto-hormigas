@@ -16,13 +16,14 @@ public class Grafo {
     
     public Grafo(){
         this.primero = null;
-        this.ultimo = null;    
+        this.ultimo = null; 
+        this.cantidad = 0;
     }
     
     public boolean existeCiudad(Object dato){
         boolean existe = false;
         if(this.cantidad > 0){
-            Ciudad aux = primero;
+            Ciudad aux = this.primero;
             while(aux != null && !existe){
                 if(aux.dato.toString().equals(dato.toString())){
                     existe = true;
@@ -35,16 +36,17 @@ public class Grafo {
     
     public void nuevoCamino(Object origen, Object destino, float distancia){
         if(existeCiudad(origen) && existeCiudad(destino)){
-            Ciudad posicion = primero;
+            Ciudad posicion = this.primero;
             while(!posicion.dato.equals(origen.toString())){
                 posicion = posicion.siguiente;
             }
             posicion.lista.nuevoCamino(destino, distancia);
-            posicion = primero;
-            while(!posicion.dato.equals(destino.toString())){
-                posicion = posicion.siguiente;
+            
+            Ciudad posicion2 = this.primero;
+            while(!posicion2.dato.equals(destino.toString())){
+                posicion2 = posicion2.siguiente;
             }
-            posicion.lista.nuevoCamino(origen, distancia);
+            posicion2.lista.nuevoCamino(origen, distancia);
         }
     }
      
@@ -83,7 +85,6 @@ public class Grafo {
                    aux2 = aux;
                    aux = aux.siguiente;
                 }
-               
                 if (aux == this.primero){
                    this.primero = this.primero.siguiente;
                    aux.siguiente = null;

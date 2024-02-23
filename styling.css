@@ -1,0 +1,25 @@
+graph{
+	fill-color: black;
+}
+
+node{
+	size: 10px, 15px;
+	shape: box;
+	fill-color: white;
+	text-alignment: at-right;
+	text-background-mode: plain;
+	text-background-color: cyan;
+	text-color: white;
+	
+	
+}
+
+node#Path{
+	fill-color: blue;
+}
+edge{
+	fill-color: green;
+}
+edge#Path{
+	fill-color: pink;
+}

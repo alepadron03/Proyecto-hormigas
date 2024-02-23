@@ -29,8 +29,7 @@ public class ImportaArchivo{
             
             while(!(linea = lector.readLine()).toLowerCase().equals("ciudad")){
             }
-            
-            
+
             while(!(linea = lector.readLine()).toLowerCase().equals("aristas")){
                 grafo.nuevaCiudad(linea);
             }
@@ -76,7 +75,7 @@ public class ImportaArchivo{
     
     public void salvadorDeArchivos(Grafo grafo){
         try{
-            BufferedWriter escritor = new BufferedWriter(new FileWriter("SaveFile.txt", true));
+            BufferedWriter escritor = new BufferedWriter(new FileWriter("SaveFile.txt"));
             
             escritor.write("ciudad\n");
             Ciudad aux = grafo.primero;

@@ -42,7 +42,7 @@ public class ListaCaminos {
     public void nuevoCamino(Object destino, float distancia){
         if(!existenciaCamino(destino)){
             Camino nodo = new Camino(destino, distancia);
-            creador(nodo, distancia);
+            creador(nodo, destino);
             
         }
     }
@@ -62,12 +62,12 @@ public class ListaCaminos {
             this.cantidad++;
         }else{
             Camino posicion = this.primero;
-            while(destino.toString().compareTo(posicion.destino.toString()) < 0){
+            while(destino.toString().compareTo(posicion.siguiente.destino.toString()) > 0){
                 posicion = posicion.siguiente;
+            }
             nodo.siguiente = posicion.siguiente;
             posicion.siguiente = nodo;
             this.cantidad++;
-            }
         }
     }
     
@@ -104,7 +104,7 @@ public class ListaCaminos {
     
     public String toString(){
         String cadena ="";
-        Camino aux = primero;
+        Camino aux = this.primero;
         while (aux != null){
             cadena = cadena+aux.destino.toString()+","+String.valueOf(aux.distancia)+" ; ";
             aux = aux.siguiente;

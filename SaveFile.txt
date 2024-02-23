@@ -1,7 +1,2 @@
 ciudad
-Messi
-Ronaldo
-Neimar
 aristas
-Messi,Ronaldo,23.0
-Ronaldo,Messi,23.0

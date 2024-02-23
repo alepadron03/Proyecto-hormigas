@@ -15,7 +15,18 @@ public class ProyectoGrafo {
      */
     public static void main(String[] args) {
         
-       new InterfazPrueba().setVisible(true);
+       String x = "2";
+       String y = "11";
+       
+        if (x.compareTo(y) <= 0){
+            System.out.println("Si");
+        }
+        else{
+            System.out.println("No");
+        }
+       
+       
+               
     }
     
 }

@@ -23,7 +23,8 @@ public class Camino {
     public Camino(Object destino, float distancia){
         this.destino = destino;
         this.distancia = distancia;
-        this.siguiente = null;        
+        this.siguiente = null;
+        this.feromonas = (float) 1.0;
     }
 
     public Object getDestino() {
