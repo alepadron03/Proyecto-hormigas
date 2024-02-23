@@ -108,7 +108,7 @@ public class ventanaAgregar extends javax.swing.JFrame {
     private void Volvermenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volvermenu1ActionPerformed
        this.setVisible(false);
        vAgregar.setVisible(true);
- y bueno
+ 
     }//GEN-LAST:event_Volvermenu1ActionPerformed
 
     /**
