@@ -11,5 +11,9 @@ package proyectograafo;
 public class ActualizaciónSimulacion {
     private Grafo grafo;
     
+    /**
+     * Aquí pongo todos los métodos para calcular la cosa
+     */
+    
     
 }

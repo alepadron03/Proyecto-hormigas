@@ -13,12 +13,17 @@ public class Hormiga {
 // private ListaCaminos caminoRecorrido;
     private Ciudad[] ciudadRecorrida;
     private int indiceCamino;
+    public float distancia;
+    public String ciudadesQuerecorrio;
 
     public Hormiga( int cantidadDeCiudad) {
         this.ciudadActual = ciudadActual;
         this.ciudadRecorrida = new Ciudad[cantidadDeCiudad];
         this.indiceCamino = 0;
     }
+    
+    
+
 // Las simulaciones se podrán realizar con un mínimo de 4 ciudades y hasta un máximo de 20 ciudades.
 
     public void agregarCiudad(Ciudad ciudad){

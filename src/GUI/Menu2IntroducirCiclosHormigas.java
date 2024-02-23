@@ -9,6 +9,7 @@ import GUI.valoresInterfaz.valoresGuardados;
 import java.util.Locale;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import proyectograafo.Grafo;
 
 /**
  *
@@ -23,12 +24,16 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     ListaSimple paramOpcionalBeta;
     JFrame warningIntroducirParamObligatorios;
     
+    
+    static Grafo grafo;
+    
     public static Menu1AgregarEliminarCargarIniciar vMenu2; 
     /**
      * Creates new form Menu2IntroducirCiclosHormigas
      */
     public Menu2IntroducirCiclosHormigas(Menu1AgregarEliminarCargarIniciar vMenu2) {
         initComponents();
+        //grafo = G;
         this.vMenu2=vMenu2;
         vMenu2.setVisible(false);
         this.setVisible(true);
@@ -315,8 +320,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                new Menu2IntroducirCiclosHormigas(vMenu2).setVisible(true);
-
+                new Menu2IntroducirCiclosHormigas(vMenu2).setVisible(true); //aqui estaba un grafo en los parametros
             }
         });
     }

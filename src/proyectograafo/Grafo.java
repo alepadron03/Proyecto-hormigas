@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyectograafo;
+import GUI.valoresInterfaz.ListaSimple;
 
 /**
  *
@@ -15,14 +16,17 @@ package proyectograafo;
 
 public class Grafo {
     public Ciudad primero;
-    public Ciudad ultimo;
-    public int cantidad;
+    public Ciudad ultimo; 
+    public int cantidad; //actual_cities
     
-    public Grafo(){
+    public Grafo(){ //cambiado el int max
+
         this.primero = null;
-        this.ultimo = null;    
+        this.ultimo = null;
+        this.cantidad=0;
     }
-    
+  
+        
     /**
      * @param dato nos indica si existe el objeto "ciudad" que exista
      * @return existe nos indica si existe la ciudad
