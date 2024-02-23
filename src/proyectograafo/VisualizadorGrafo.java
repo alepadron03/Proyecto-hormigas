@@ -42,8 +42,6 @@ public class VisualizadorGrafo {
             aux2 = aux2.siguiente;
         }
         
-        grafoVisualizado.display();
-        
         
     }
 }

@@ -27,14 +27,21 @@ public class Camino {
         this.feromonas = (float) 1.0;
     }
 
+  
     public Object getDestino() {
         return destino;
     }
 
+    /**
+     * @return distancia
+     */
     public float getDistancia() {
         return distancia;
     }
-
+    
+    /**
+     * @return feromonas
+     */
     public float getFeromonas() {
         return feromonas;
     }
