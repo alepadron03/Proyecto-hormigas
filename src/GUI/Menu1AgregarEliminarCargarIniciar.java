@@ -44,7 +44,6 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         eliminarElementosmenu1 = new javax.swing.JButton();
-        agregarElementosmenu1 = new javax.swing.JButton();
         verGrafomenu1 = new javax.swing.JButton();
         SalirMenu1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -84,15 +83,7 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
                 eliminarElementosmenu1ActionPerformed(evt);
             }
         });
-        jPanel1.add(eliminarElementosmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 140, -1));
-
-        agregarElementosmenu1.setText("Agregar elementos");
-        agregarElementosmenu1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarElementosmenu1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(agregarElementosmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, -1));
+        jPanel1.add(eliminarElementosmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, -1));
 
         verGrafomenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/verGrafo1.png"))); // NOI18N
         verGrafomenu1.setText("Ver grafo");
@@ -135,14 +126,6 @@ this.toFront();
     private void verGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGrafomenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_verGrafomenu1ActionPerformed
-
-    private void agregarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarElementosmenu1ActionPerformed
-        ventanaAgregar vAgregar=new ventanaAgregar(this);
-        vAgregar.setVisible(true);
-        
-       getContentPane().add(this);
-        this.toFront();
-    }//GEN-LAST:event_agregarElementosmenu1ActionPerformed
 
     private void eliminarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarElementosmenu1ActionPerformed
     
@@ -193,7 +176,6 @@ this.toFront();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SalirMenu1;
-    private javax.swing.JButton agregarElementosmenu1;
     private javax.swing.JButton cargarGrafomenu1;
     private javax.swing.JButton eliminarElementosmenu1;
     private javax.swing.JButton iniciarSimulaciónmenu1;

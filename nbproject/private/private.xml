@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ProyectoGrafo.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Grafo.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/Ciudad.java</file>
@@ -30,6 +31,28 @@
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/valoresInterfaz/valoresGuardados.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/proyectograafo/ImportaArchivo.java</file>
             <file>file:/C:/Users/alexp/OneDrive/Escritorio/Proyecto%20hormigas/src/GUI/valoresInterfaz/valoresInterfazREADME</file>
+=======
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/ProyectoGrafo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/ListaCaminos.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/valoresInterfaz/nodo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/Ciudad.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/ventanaAgregar.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/grafos/Arco.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/valoresInterfaz/ListaSimple.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/valoresInterfaz/valoresInterfazREADME</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/Menu1AgregarEliminarCargarIniciar.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/ImportaArchivo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/ActualizaciónSimulacion.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/grafos/GrafosInterfaz.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/Menu2IntroducirCiclosHormigas.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/ventanaCargararchivo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/Camino.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/Hormiga.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/proyectograafo/Grafo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/valoresInterfaz/valoresGuardados.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/grafos/Grafo.java</file>
+            <file>file:/C:/Users/joseg/Desktop/Repositorio_de_github/Proyecto-hormigas/src/GUI/Menu3FinalizarGrafoGuardar.java</file>
+>>>>>>> a0fd1be65a6c461844b0ed678eab301d85b6c053
         </group>
     </open-files>
 </project-private>

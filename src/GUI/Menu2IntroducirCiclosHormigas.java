@@ -9,6 +9,7 @@ import GUI.valoresInterfaz.valoresGuardados;
 import java.util.Locale;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import proyectograafo.Grafo;
 
 /**
  *
@@ -23,12 +24,16 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
     ListaSimple paramOpcionalBeta;
     JFrame warningIntroducirParamObligatorios;
     
+    
+    static Grafo grafo;
+    
     public static Menu1AgregarEliminarCargarIniciar vMenu2; 
     /**
      * Creates new form Menu2IntroducirCiclosHormigas
      */
     public Menu2IntroducirCiclosHormigas(Menu1AgregarEliminarCargarIniciar vMenu2) {
         initComponents();
+        //grafo = G;
         this.vMenu2=vMenu2;
         vMenu2.setVisible(false);
         this.setVisible(true);
@@ -65,7 +70,6 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         volverMenu1menu2 = new javax.swing.JButton();
-        iniciarViajemenu2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         escribirParametrobeta = new javax.swing.JTextField();
         entrarParametrobeta = new javax.swing.JButton();
@@ -77,6 +81,7 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         entrarNumerodeciclosmenu2 = new javax.swing.JButton();
         escribirNumerodeciclosmenu2 = new javax.swing.JTextField();
         escribirNumerohormigasmenu2 = new javax.swing.JTextField();
+        iniciarViajemenu2 = new javax.swing.JButton();
         Agregar2 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
@@ -146,14 +151,6 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         });
         getContentPane().add(volverMenu1menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
-        iniciarViajemenu2.setText("Iniciar viaje");
-        iniciarViajemenu2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iniciarViajemenu2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(iniciarViajemenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
-
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(escribirParametrobeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 40, -1));
 
@@ -203,6 +200,14 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
             }
         });
         jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 40, -1));
+
+        iniciarViajemenu2.setText("Iniciar viaje");
+        iniciarViajemenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarViajemenu2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(iniciarViajemenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -30, 650, 410));
 
@@ -315,8 +320,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                new Menu2IntroducirCiclosHormigas(vMenu2).setVisible(true);
-
+                new Menu2IntroducirCiclosHormigas(vMenu2).setVisible(true); //aqui estaba un grafo en los parametros
             }
         });
     }

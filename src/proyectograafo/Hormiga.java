@@ -13,13 +13,22 @@ public class Hormiga extends Grafo {
     private Ciudad ciudadActual;
 // private ListaCaminos caminoRecorrido;
     private Ciudad[] ciudadRecorrida;
+
   
+
+    private int indiceCamino;
+    public float distancia;
+    public String ciudadesQuerecorrio;
+
 
     public Hormiga(Ciudad primera, int CantidadCiudades) {
         this.ciudadActual = primera;
         this.ciudadRecorrida = new Ciudad[CantidadCiudades];
         ciudadRecorrida[0] = primera;
     }
+    
+    
+
 // Las simulaciones se podrán realizar con un mínimo de 4 ciudades y hasta un máximo de 20 ciudades.
 
    public boolean comprobarCiudadHormiga(Ciudad ciudad){

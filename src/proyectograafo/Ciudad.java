@@ -10,9 +10,9 @@ package proyectograafo;
  * <code>Representa las ciudades o los vertices/nodos</code>
  */
 public class Ciudad {
-    Object dato;
-    ListaCaminos lista;
-    Ciudad siguiente;
+    Object dato; //el dato es un object
+    ListaCaminos lista; //esta es la lista de adyacencia
+    Ciudad siguiente; 
     
     
     public Ciudad(Object dato){
