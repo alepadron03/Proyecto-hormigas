@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import proyectograafo.*;
 /**
  *
  * @author joseg
@@ -42,9 +42,9 @@ public class ventanaEliminar extends javax.swing.JFrame {
         elegirHormigasCiudades = new javax.swing.JComboBox<>();
         númeroCiudadesHormigas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         volverMenu1eliminar = new javax.swing.JButton();
+        mensajeEliminación1 = new javax.swing.JLabel();
+        mensajeEliminación2 = new javax.swing.JLabel();
 
         jButton2.setText("Volver a menu");
 
@@ -60,18 +60,11 @@ public class ventanaEliminar extends javax.swing.JFrame {
                 elegirHormigasCiudadesActionPerformed(evt);
             }
         });
-        getContentPane().add(elegirHormigasCiudades, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 130, -1));
-        getContentPane().add(númeroCiudadesHormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 110, 23));
+        getContentPane().add(elegirHormigasCiudades, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 130, -1));
+        getContentPane().add(númeroCiudadesHormigas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 110, 23));
 
         jButton1.setText("Eliminar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("\nMínimo 4 elementos pueden ser eliminados, máximo 20.\nInserte en la caja el número deseado de elementos.");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 90));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, -1));
 
         volverMenu1eliminar.setText("Volver a menu");
         volverMenu1eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +73,10 @@ public class ventanaEliminar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(volverMenu1eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+
+        mensajeEliminación1.setText("Introduzca la cantidad de elementos que quiera eliminar");
+        getContentPane().add(mensajeEliminación1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 460, 20));
+        getContentPane().add(mensajeEliminación2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -93,7 +90,7 @@ this.toBack();
 setVisible(false); /**
  * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
  */
-new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+new GUI.Menu1AgregarEliminarCargarIniciar(GUI.Menu1AgregarEliminarCargarIniciar.grafo).setState(java.awt.Frame.NORMAL); //he agregado cada constructor con el grafo
 /**
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */
@@ -140,8 +137,8 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel mensajeEliminación1;
+    private javax.swing.JLabel mensajeEliminación2;
     private javax.swing.JTextField númeroCiudadesHormigas;
     private javax.swing.JButton volverMenu1eliminar;
     // End of variables declaration//GEN-END:variables
