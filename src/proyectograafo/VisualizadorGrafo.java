@@ -5,7 +5,6 @@
 package proyectograafo;
 import org.graphstream.graph.*;
 import org.graphstream.graph.implementations.*;
-import org.graphstream.ui.view.Viewer;
 import java.io.File;
 
 
@@ -14,9 +13,7 @@ import java.io.File;
  * @author CMGamer
  */
 public class VisualizadorGrafo {
-    
-    
-    
+   
     public void GrafoVisualizador(Grafo grafo){
         System.setProperty("org.graphstream.ui", "swing");
         
@@ -42,6 +39,6 @@ public class VisualizadorGrafo {
             aux2 = aux2.siguiente;
         }
         
-        
+        grafoVisualizado.display();
     }
 }

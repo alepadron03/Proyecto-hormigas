@@ -166,6 +166,7 @@ public class InterfazPrueba extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         VisualizadorGrafo x = new VisualizadorGrafo();
         x.GrafoVisualizador(grafo);
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
