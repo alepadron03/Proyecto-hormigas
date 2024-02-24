@@ -4,12 +4,14 @@
  */
 package GUI;
 
+import static GUI.Menu1AgregarEliminarCargarIniciar.grafo;
 import GUI.valoresInterfaz.ListaSimple;
 import GUI.valoresInterfaz.valoresGuardados;
 import java.util.Locale;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import GUI.Menu2IntroducirCiclosHormigas.*;
+import proyectograafo.*;
 /**
  *
  * @author joseg
@@ -17,14 +19,14 @@ import GUI.Menu2IntroducirCiclosHormigas.*;
 public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
     
     
-    public static Menu2IntroducirCiclosHormigas vMenu3;
+    public static Menu2AgregarHormigasCiudades vMenu2AgregarHormigasCiudades;
     /**
      * Creates new form Menu3FinalizarGrafoGuardar
      */
-    public Menu3FinalizarGrafoGuardar(Menu2IntroducirCiclosHormigas vMenu3) {
+    public Menu3FinalizarGrafoGuardar(Menu2AgregarHormigasCiudades vMenu2AgregarHormigasCiudades) {
         initComponents();
-        this.vMenu3=vMenu3;
-        vMenu3.setVisible(false);
+        this.vMenu2AgregarHormigasCiudades=vMenu2AgregarHormigasCiudades;
+        vMenu2AgregarHormigasCiudades.setVisible(false);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
         
@@ -114,7 +116,8 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
     }//GEN-LAST:event_verGrafoActionPerformed
 
     private void verGradomenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGradomenu3ActionPerformed
-        // TODO add your handling code here:
+VisualizadorGrafo x = new VisualizadorGrafo();
+        x.GrafoVisualizador(grafo);
     }//GEN-LAST:event_verGradomenu3ActionPerformed
 
     private void volverMenu1menu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menu3ActionPerformed
@@ -122,7 +125,7 @@ public class Menu3FinalizarGrafoGuardar extends javax.swing.JFrame {
 setVisible(false); /**
  * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
  */
-new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+new GUI.Menu1AgregarEliminarCargarIniciar(GUI.Menu1AgregarEliminarCargarIniciar.grafo).setState(java.awt.Frame.NORMAL);
 /**
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */
@@ -162,7 +165,7 @@ new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu3FinalizarGrafoGuardar(vMenu3).setVisible(true);
+                new Menu3FinalizarGrafoGuardar(vMenu2AgregarHormigasCiudades).setVisible(true);
             }
         });
     }

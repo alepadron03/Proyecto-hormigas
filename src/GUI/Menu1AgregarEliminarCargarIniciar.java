@@ -4,22 +4,27 @@
  */
 package GUI;
 import GUI.Menu2IntroducirCiclosHormigas;
+import proyectograafo.Grafo;
+import proyectograafo.Menu1EliminarHormigasCiudades;
+import proyectograafo.Menu1CargarArchivo;
+import proyectograafo.VisualizadorGrafo;
 
 /**
  *
  * @author joseg
  */
 public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
-    
+    public static Grafo grafo=new Grafo(); //Ok, trate de que sea static para que este grafo se compartiese en todos los grafos y pudiese verse igual, entonces nada.
     public static Menu1AgregarEliminarCargarIniciar vMenu1;
     /**
      * Creates new form menuAgregarEliminarCargarIniciar
      */
-    public Menu1AgregarEliminarCargarIniciar() {
+    
+    public Menu1AgregarEliminarCargarIniciar(Grafo grafo) {
         initComponents(); 
         this.vMenu1=vMenu1;
         this.setVisible(true); //para que se vea
-        
+        this.grafo=grafo;
         /*
         this.dispose para borrar una vista
         
@@ -112,8 +117,8 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cargarGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarGrafomenu1ActionPerformed
-ventanaCargararchivo vCargararchivo=new ventanaCargararchivo(this);
-vCargararchivo.setVisible(true);
+Menu1CargarArchivo vCargarArch=new Menu1CargarArchivo(this);
+vCargarArch.setVisible(true);
 this.toFront();
     }//GEN-LAST:event_cargarGrafomenu1ActionPerformed
 
@@ -124,12 +129,14 @@ this.toFront();
     }//GEN-LAST:event_iniciarSimulaciónmenu1ActionPerformed
 
     private void verGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGrafomenu1ActionPerformed
-        // TODO add your handling code here:
+        VisualizadorGrafo x = new VisualizadorGrafo();
+        x.GrafoVisualizador(grafo);
+
     }//GEN-LAST:event_verGrafomenu1ActionPerformed
 
     private void eliminarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarElementosmenu1ActionPerformed
-    
-    ventanaEliminar vEliminar=new ventanaEliminar(this);
+
+    Menu1EliminarHormigasCiudades vEliminar=new Menu1EliminarHormigasCiudades(this);
     vEliminar.setVisible(true);
     this.toFront();
     }//GEN-LAST:event_eliminarElementosmenu1ActionPerformed
@@ -169,7 +176,7 @@ this.toFront();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu1AgregarEliminarCargarIniciar().setVisible(true);
+                new Menu1AgregarEliminarCargarIniciar(grafo).setVisible(true);
             }
         });
     }

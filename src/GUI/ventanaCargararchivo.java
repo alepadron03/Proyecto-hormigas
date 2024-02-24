@@ -139,7 +139,7 @@ if(seleccionArchivo==JFileChooser.APPROVE_OPTION){
 setVisible(false); /**
  * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
  */
-new GUI.Menu1AgregarEliminarCargarIniciar().setState(java.awt.Frame.NORMAL);
+new GUI.Menu1AgregarEliminarCargarIniciar(GUI.Menu1AgregarEliminarCargarIniciar.grafo).setState(java.awt.Frame.NORMAL);
 /**
  * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
  */

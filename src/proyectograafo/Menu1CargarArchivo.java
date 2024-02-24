@@ -4,18 +4,21 @@
  */
 package proyectograafo;
 
+import GUI.Menu1AgregarEliminarCargarIniciar;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author CMGamer
  */
-public class InterfazPrueba extends javax.swing.JFrame {
-    Grafo grafo = new Grafo();
+public class Menu1CargarArchivo extends javax.swing.JFrame {
+    
+    public static Menu1AgregarEliminarCargarIniciar vCargarArchivo;
+    Grafo grafo = new Grafo(); //poner el static grafo
     /**
      * Creates new form InterfazPrueba
      */
-    public InterfazPrueba() {
+    public Menu1CargarArchivo(Menu1AgregarEliminarCargarIniciar vCargarArchivo) {
         initComponents();
     }
 
@@ -30,53 +33,24 @@ public class InterfazPrueba extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Entrada = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Salida = new javax.swing.JTextArea();
+        volverMenu1menuCargar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Entrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EntradaActionPerformed(evt);
+            }
+        });
         jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, 70));
-
-        jButton1.setText("Agregar Ciudad");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
-
-        jButton2.setText("Agregar Camino");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
-
-        jButton3.setText("Eliminar Ciudad");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
-
-        jButton4.setText("Eliminar Camino");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
         jButton5.setText("Abrir Archivo");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +58,7 @@ public class InterfazPrueba extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
 
         jButton6.setText("Salvar Archivo");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +66,7 @@ public class InterfazPrueba extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         jButton7.setText("Mostrar Grafo");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -100,56 +74,26 @@ public class InterfazPrueba extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
 
         Salida.setColumns(20);
         Salida.setRows(5);
         jScrollPane1.setViewportView(Salida);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 420, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 420, 250));
+
+        volverMenu1menuCargar.setText("Volver a menú");
+        volverMenu1menuCargar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverMenu1menuCargarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(volverMenu1menuCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String dato= Entrada.getText();
-        grafo.nuevaCiudad(dato);
-        Salida.setText(grafo.toString());
-        Entrada.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String origen = "";
-        String destino = "";
-        float distancia;
-        origen = JOptionPane.showInputDialog("Origen");
-        destino = JOptionPane.showInputDialog("Destino");
-        distancia = Float.parseFloat(JOptionPane.showInputDialog("Distancia"));
-        if(grafo.existeCiudad(origen) && grafo.existeCiudad(destino)){
-            grafo.nuevoCamino(origen, destino, distancia);
-        }
-        Salida.setText(grafo.toString());
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String dato= Entrada.getText();
-        grafo.eliminarCiudad(dato);
-        Salida.setText(grafo.toString());
-        Entrada.setText("");
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String origen = "";
-        String destino = "";
-        origen = JOptionPane.showInputDialog("Origen");
-        destino = JOptionPane.showInputDialog("Destino");
-        if(grafo.existeCiudad(origen) && grafo.existeCiudad(destino)){
-            grafo.eliminarCamino(origen, destino);
-        }
-        Salida.setText(grafo.toString());
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         ImportaArchivo x = new ImportaArchivo();
@@ -169,6 +113,22 @@ public class InterfazPrueba extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void EntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntradaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EntradaActionPerformed
+
+    private void volverMenu1menuCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menuCargarActionPerformed
+        setVisible(false); 
+        this.toBack();
+        this.toFront();
+        /**
+        * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
+        */
+        /**
+        * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
+        */
+    }//GEN-LAST:event_volverMenu1menuCargarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -186,20 +146,83 @@ public class InterfazPrueba extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1CargarArchivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1CargarArchivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1CargarArchivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazPrueba.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1CargarArchivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazPrueba().setVisible(true);
+                new Menu1CargarArchivo(vCargarArchivo).setVisible(true);
             }
         });
     }
@@ -207,14 +230,11 @@ public class InterfazPrueba extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Entrada;
     private javax.swing.JTextArea Salida;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton volverMenu1menuCargar;
     // End of variables declaration//GEN-END:variables
 }
