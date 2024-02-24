@@ -10,27 +10,51 @@ import proyectograafo.Ciudad;
  *
  * @author alexp
  */
-public class Hormiga {
+public class Hormiga extends Grafo {
+    private Grafo grafo;
     private Ciudad ciudadActual;
 // private ListaCaminos caminoRecorrido;
     private Ciudad[] ciudadRecorrida;
-    private int indiceCamino;
 
-    public Hormiga( int cantidadDeCiudad) {
-        this.ciudadActual = ciudadActual;
-        this.ciudadRecorrida = new Ciudad[cantidadDeCiudad];
-        this.indiceCamino = 0;
+  
+
+    private int indiceCamino;
+    public float distancia;
+    public String ciudadesQuerecorrio;
+
+
+    public Hormiga(Ciudad primera, int CantidadCiudades) {
+        this.ciudadActual = primera;
+        this.ciudadRecorrida = new Ciudad[CantidadCiudades];
+        ciudadRecorrida[0] = primera;
     }
+    
+    
+
 // Las simulaciones se podrán realizar con un mínimo de 4 ciudades y hasta un máximo de 20 ciudades.
 
-    public void agregarCiudad(Ciudad ciudad){
-        if(indiceCamino<ciudadRecorrida.length){
-            this.ciudadRecorrida[indiceCamino]=ciudad;
-            indiceCamino++;
-        }else{
-            System.out.println("No se puede agregar mas caminos, el arreglo esta lleno");
-        }
-    }
+   public boolean comprobarCiudadHormiga(Ciudad ciudad){
+       for (int i = 0; i < ciudad; i++) {
+           if(ciudadRecorrida[i].dato.toString().equals(ciudad.dato.toString())){
+               System.out.println("Ya visitaste esta ciudad");
+               return false;
+           }
+         
+       }
+       return true;
+      
+       
+       
+   }
+   
+   public void agregarCiudadHormiga(Ciudad ciudad){
+      
+       if(comprobarCiudadHormiga(ciudad)){
+           Ciudad[] array = Arrays.copuOf()
+       }  
+       
+       
+   }
 
     public Ciudad getCiudadActual() {
         return ciudadActual;
@@ -49,11 +73,11 @@ public class Hormiga {
     }
 
     public int getIndiceCamino() {
-        return indiceCamino;
+        return indiceCiudad;
     }
 
     public void setIndiceCamino(int indiceCamino) {
-        this.indiceCamino = indiceCamino;
+        this.indiceCiudad = indiceCamino;
     }
     
     

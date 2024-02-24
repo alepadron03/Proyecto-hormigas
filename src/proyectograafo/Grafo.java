@@ -14,16 +14,17 @@ package proyectograafo;
 
 public class Grafo {
     public Ciudad primero;
-    public Ciudad ultimo;
-    public int cantidad;
+    public Ciudad ultimo; 
+    public int cantidad; //actual_cities
     
-    public Grafo(){
+    public Grafo(){ //cambiado el int max
+
         this.primero = null;
         this.ultimo = null; 
         this.cantidad = 0;
     }
-    
-
+  
+ 
     public boolean existeCiudad(Object dato){
         boolean existe = false;
         if(this.cantidad > 0){

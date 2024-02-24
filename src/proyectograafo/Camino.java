@@ -15,7 +15,7 @@ package proyectograafo;
 
 public class Camino {
     
-    Object destino;
+    Object destino; 
     float distancia;
     float feromonas;
     Camino siguiente;
