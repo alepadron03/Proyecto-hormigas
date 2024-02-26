@@ -5,6 +5,7 @@
 package proyectograafo;
 import org.graphstream.graph.*;
 import org.graphstream.graph.implementations.*;
+import org.graphstream.ui.view.Viewer;
 import java.io.File;
 
 
@@ -38,7 +39,7 @@ public class VisualizadorGrafo {
             }
             aux2 = aux2.siguiente;
         }
-        
-        grafoVisualizado.display();
+        Viewer visualizador = grafoVisualizado.display();
+        visualizador.setCloseFramePolicy(Viewer.CloseFramePolicy.HIDE_ONLY);
     }
 }

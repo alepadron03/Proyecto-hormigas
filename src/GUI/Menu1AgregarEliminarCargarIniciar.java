@@ -4,17 +4,15 @@
  */
 package GUI;
 import GUI.Menu2IntroducirCiclosHormigas;
-import proyectograafo.Grafo;
-import proyectograafo.Menu1EliminarHormigasCiudades;
-import proyectograafo.Menu1CargarArchivo;
-import proyectograafo.VisualizadorGrafo;
+import javax.swing.JOptionPane;
+import proyectograafo.*;
 
 /**
  *
  * @author joseg
  */
 public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
-    public static Grafo grafo=new Grafo(); //Ok, trate de que sea static para que este grafo se compartiese en todos los grafos y pudiese verse igual, entonces nada.
+    public static Grafo grafo = new Grafo(); //Ok, trate de que sea static para que este grafo se compartiese en todos los grafos y pudiese verse igual, entonces nada.
     public static Menu1AgregarEliminarCargarIniciar vMenu1;
     /**
      * Creates new form menuAgregarEliminarCargarIniciar
@@ -42,18 +40,21 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         tituloMenu1 = new javax.swing.JLabel();
-        cargarGrafomenu1 = new javax.swing.JButton();
-        iniciarSimulaciónmenu1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        iniciarSimulaciónmenu1 = new javax.swing.JButton();
         eliminarElementosmenu1 = new javax.swing.JButton();
         verGrafomenu1 = new javax.swing.JButton();
         SalirMenu1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        cargarGrafomenu1 = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jEditorPane1);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/ANT CARD sunset.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,14 +63,9 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
         tituloMenu1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         tituloMenu1.setText("Simulación de Hormigas");
         getContentPane().add(tituloMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 89, -1, -1));
 
-        cargarGrafomenu1.setText("Cargar Grafo");
-        cargarGrafomenu1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cargarGrafomenu1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cargarGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 130, 140, -1));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         iniciarSimulaciónmenu1.setText("Iniciar simulación");
         iniciarSimulaciónmenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -77,18 +73,15 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
                 iniciarSimulaciónmenu1ActionPerformed(evt);
             }
         });
-        getContentPane().add(iniciarSimulaciónmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 101, 140, -1));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 89, -1, -1));
+        jPanel1.add(iniciarSimulaciónmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 140, -1));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        eliminarElementosmenu1.setText("Eliminar elementos");
+        eliminarElementosmenu1.setText("Modificar Grafo");
         eliminarElementosmenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eliminarElementosmenu1ActionPerformed(evt);
             }
         });
-        jPanel1.add(eliminarElementosmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, -1));
+        jPanel1.add(eliminarElementosmenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 140, 30));
 
         verGrafomenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/verGrafo1.png"))); // NOI18N
         verGrafomenu1.setText("Ver grafo");
@@ -97,7 +90,7 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
                 verGrafomenu1ActionPerformed(evt);
             }
         });
-        jPanel1.add(verGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 140, 210));
+        jPanel1.add(verGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 140, 210));
 
         SalirMenu1.setText("Salir");
         SalirMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,27 +98,34 @@ public class Menu1AgregarEliminarCargarIniciar extends javax.swing.JFrame {
                 SalirMenu1ActionPerformed(evt);
             }
         });
-        jPanel1.add(SalirMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel1.add(SalirMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/ANT CARD sunset.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-360, -90, -1, -1));
+        cargarGrafomenu1.setText("Cargar Grafo");
+        cargarGrafomenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargarGrafomenu1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargarGrafomenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 140, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 560, 370));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cargarGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarGrafomenu1ActionPerformed
-Menu1CargarArchivo vCargarArch=new Menu1CargarArchivo(this);
-vCargarArch.setVisible(true);
-this.toFront();
+        Menu1CargarArchivo vCargarArch=new Menu1CargarArchivo(this);
+        vCargarArch.setVisible(true);
     }//GEN-LAST:event_cargarGrafomenu1ActionPerformed
 
     private void iniciarSimulaciónmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulaciónmenu1ActionPerformed
-Menu2IntroducirCiclosHormigas vMenu2=new Menu2IntroducirCiclosHormigas(this);
-vMenu2.setVisible(true); //hola
-this.toFront();
+        if(grafo.cantidad >= 4 && grafo.existeConexion(grafo.primero, grafo.ultimo) && grafo.cantidad <= 20){
+            Menu2IntroducirCiclosHormigas vMenu2=new Menu2IntroducirCiclosHormigas(this);
+            vMenu2.setVisible(true); 
+        }else{
+            JOptionPane.showMessageDialog(null, "No se pudo iniciar la simulacion ya que su grafo no cumple con los requisitos minimos\n1. Debe haber minimo 4 ciudades, con no mas que 20.\n2. Debe existir alguna conexion entre la ciudad inicial y la final (Nido y Comida)");
+        }
+        
     }//GEN-LAST:event_iniciarSimulaciónmenu1ActionPerformed
 
     private void verGrafomenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verGrafomenu1ActionPerformed
@@ -136,9 +136,8 @@ this.toFront();
 
     private void eliminarElementosmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarElementosmenu1ActionPerformed
 
-    Menu1EliminarHormigasCiudades vEliminar=new Menu1EliminarHormigasCiudades(this);
+    Menu1ModificarGrafo vEliminar=new Menu1ModificarGrafo(this);
     vEliminar.setVisible(true);
-    this.toFront();
     }//GEN-LAST:event_eliminarElementosmenu1ActionPerformed
 
     private void SalirMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirMenu1ActionPerformed
@@ -180,6 +179,16 @@ this.toFront();
             }
         });
     }
+
+    public static Grafo getGrafo() {
+        return grafo;
+    }
+
+    public static void setGrafo(Grafo grafo) {
+        Menu1AgregarEliminarCargarIniciar.grafo = grafo;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SalirMenu1;

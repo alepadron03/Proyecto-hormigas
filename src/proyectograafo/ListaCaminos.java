@@ -102,6 +102,37 @@ public class ListaCaminos {
         }
     }
     
+    public Camino obtenerDatoIndice(int dato){
+        if(dato == 0){
+            return this.primero;
+        }else if(dato == this.cantidad-1){
+            return this.ultimo;
+        }else{
+            Camino aux = this.primero;
+            for (int i = 0; i < dato; i++) {
+                aux = aux.siguiente;
+            }
+            return aux;
+        }
+    }
+
+    public int obtenerIndice(Camino dato){
+        if(dato == this.primero){
+            return 0;
+        }else if(dato == this.ultimo){
+            return this.cantidad-1;
+        }else{
+            int x = 0;
+            Camino aux = this.primero;
+            while(dato != aux){
+                aux = aux.siguiente;
+                x++;
+            }
+            return x;        
+        }
+    }
+    
+    
     public String toString(){
         String cadena ="";
         Camino aux = this.primero;

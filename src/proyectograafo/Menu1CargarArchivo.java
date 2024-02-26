@@ -14,12 +14,13 @@ import javax.swing.JOptionPane;
 public class Menu1CargarArchivo extends javax.swing.JFrame {
     
     public static Menu1AgregarEliminarCargarIniciar vCargarArchivo;
-    Grafo grafo = new Grafo(); //poner el static grafo
+    public Grafo grafo = Menu1AgregarEliminarCargarIniciar.grafo; //tenemos que poner el mismo grafo static
     /**
      * Creates new form InterfazPrueba
      */
     public Menu1CargarArchivo(Menu1AgregarEliminarCargarIniciar vCargarArchivo) {
         initComponents();
+        Salida.setText(grafo.toString());
     }
 
     /**
@@ -32,25 +33,18 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Entrada = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Salida = new javax.swing.JTextArea();
         volverMenu1menuCargar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Entrada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EntradaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, 70));
 
         jButton5.setText("Abrir Archivo");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +52,7 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jButton6.setText("Salvar Archivo");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +60,7 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
 
         jButton7.setText("Mostrar Grafo");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -74,13 +68,13 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
 
         Salida.setColumns(20);
         Salida.setRows(5);
         jScrollPane1.setViewportView(Salida);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 420, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 420, 310));
 
         volverMenu1menuCargar.setText("Volver a menú");
         volverMenu1menuCargar.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +82,15 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
                 volverMenu1menuCargarActionPerformed(evt);
             }
         });
-        jPanel1.add(volverMenu1menuCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel1.add(volverMenu1menuCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, -1, -1));
+
+        jButton1.setText("Salvar Grafo Actual");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 450));
 
@@ -113,14 +115,11 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void EntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntradaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EntradaActionPerformed
-
     private void volverMenu1menuCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menuCargarActionPerformed
-        setVisible(false); 
-        this.toBack();
-        this.toFront();
+
+        this.setVisible(false); 
+        
+
         /**
         * @param false es para indicar que al devolverse en el programa, esta ventana "this" requiere irse.
         */
@@ -128,6 +127,10 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
         * @param NORMAL en setState es para indicar que es la ventana referenciada es el estado "normal" de una aplicación.
         */
     }//GEN-LAST:event_volverMenu1menuCargarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Menu1AgregarEliminarCargarIniciar.setGrafo(grafo);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,69 +158,7 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu1CargarArchivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -228,8 +169,8 @@ public class Menu1CargarArchivo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Entrada;
     private javax.swing.JTextArea Salida;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

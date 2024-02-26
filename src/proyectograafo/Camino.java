@@ -8,7 +8,7 @@ package proyectograafo;
 
 /**
  *
- * @author CMGamer'
+ * @author CMGamer
  * <code>Representa los Caminos o las aristas/arcos</code>
  */
 

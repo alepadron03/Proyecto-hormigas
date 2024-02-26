@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author CMGamer
  */
-public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
+public class Menu1ModificarGrafo extends javax.swing.JFrame {
     public Grafo grafo = Menu1AgregarEliminarCargarIniciar.grafo; //tenemos que poner el mismo grafo static
     /**
      * Creates new form InterfazPrueba
@@ -19,8 +19,9 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
     
     public static Menu1AgregarEliminarCargarIniciar vEliminarHormigasCiudades;
     
-    public Menu1EliminarHormigasCiudades(Menu1AgregarEliminarCargarIniciar vEliminarHormigasCiudades) {
+    public Menu1ModificarGrafo(Menu1AgregarEliminarCargarIniciar vEliminarHormigasCiudades) {
         initComponents();
+        Salida.setText(grafo.toString());
     }
 
     /**
@@ -35,13 +36,13 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Entrada = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        eliminarHormiga = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Salida = new javax.swing.JTextArea();
         jButton8 = new javax.swing.JButton();
         volverMenu1menuCargar = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,29 +56,21 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 120, -1));
 
-        eliminarHormiga.setText("Eliminar hormiga");
-        eliminarHormiga.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarHormigaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(eliminarHormiga, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
-
-        jButton7.setText("Mostrar Grafo");
+        jButton7.setText("Grafo Visualizado");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 107, 130, 70));
 
         Salida.setColumns(20);
         Salida.setRows(5);
         jScrollPane1.setViewportView(Salida);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 420, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 430, 250));
 
         jButton8.setText("Eliminar Camino");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +78,7 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
 
         volverMenu1menuCargar.setText("Volver a menú");
         volverMenu1menuCargar.addActionListener(new java.awt.event.ActionListener() {
@@ -93,17 +86,25 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
                 volverMenu1menuCargarActionPerformed(evt);
             }
         });
-        jPanel1.add(volverMenu1menuCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
+        jPanel1.add(volverMenu1menuCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, -1, -1));
 
-        jButton5.setText("Abrir Archivo");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Agregar Ciudad");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 450));
+        jButton2.setText("Agregar Camino");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,17 +115,6 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void eliminarHormigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarHormigaActionPerformed
-        String origen = "";
-        String destino = "";
-        origen = JOptionPane.showInputDialog("Origen");
-        destino = JOptionPane.showInputDialog("Destino");
-        if(grafo.existeCiudad(origen) && grafo.existeCiudad(destino)){
-            grafo.eliminarCamino(origen, destino);
-        }
-        Salida.setText(grafo.toString());
-    }//GEN-LAST:event_eliminarHormigaActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String dato= Entrada.getText();
         grafo.eliminarCiudad(dato);
@@ -133,7 +123,14 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        String origen = "";
+        String destino = "";
+        origen = JOptionPane.showInputDialog("Origen");
+        destino = JOptionPane.showInputDialog("Destino");
+        if(grafo.existeCiudad(origen) && grafo.existeCiudad(destino)){
+            grafo.eliminarCamino(origen, destino);
+        }
+        Salida.setText(grafo.toString());
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void volverMenu1menuCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverMenu1menuCargarActionPerformed
@@ -148,12 +145,27 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
         */
     }//GEN-LAST:event_volverMenu1menuCargarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        ImportaArchivo x = new ImportaArchivo();
-        Grafo y = x.lectorDeArchivos();
-        grafo = y;
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(!Entrada.getText().isBlank()){
+            String dato= Entrada.getText();
+            grafo.nuevaCiudad(dato);
+            Salida.setText(grafo.toString());
+            Entrada.setText("");
+       }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String origen = "";
+        String destino = "";
+        float distancia;
+        origen = JOptionPane.showInputDialog("Origen");
+        destino = JOptionPane.showInputDialog("Destino");
+        distancia = Float.parseFloat(JOptionPane.showInputDialog("Distancia"));
+        if(grafo.existeCiudad(origen) && grafo.existeCiudad(destino)){
+            grafo.nuevoCamino(origen, destino, distancia);
+        }
         Salida.setText(grafo.toString());
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,14 +184,18 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu1EliminarHormigasCiudades.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1ModificarGrafo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu1EliminarHormigasCiudades.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1ModificarGrafo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu1EliminarHormigasCiudades.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1ModificarGrafo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu1EliminarHormigasCiudades.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu1ModificarGrafo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -188,7 +204,7 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu1EliminarHormigasCiudades(vEliminarHormigasCiudades).setVisible(true);
+                new Menu1ModificarGrafo(vEliminarHormigasCiudades).setVisible(true);
             }
         });
     }
@@ -196,9 +212,9 @@ public class Menu1EliminarHormigasCiudades extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Entrada;
     private javax.swing.JTextArea Salida;
-    private javax.swing.JButton eliminarHormiga;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JPanel jPanel1;

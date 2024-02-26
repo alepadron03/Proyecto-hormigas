@@ -6,10 +6,8 @@ package GUI;
 
 import GUI.valoresInterfaz.ListaSimple;
 import GUI.valoresInterfaz.valoresGuardados;
-import java.util.Locale;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import proyectograafo.Grafo;
 import proyectograafo.*;
 
 /**
@@ -40,7 +38,9 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         this.paramOpcionalAlfa=new ListaSimple();
         this.paramOpcionalBeta=new ListaSimple();
         this.contenedorValores=new valoresGuardados(paramObligatorioHormigas, paramObligatorioCiudad, paramOpcionalAlfa, paramOpcionalBeta);
+        Salida.setText(Menu1AgregarEliminarCargarIniciar.getGrafo().toString());
                 }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +62,6 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         escribirParametrobeta = new javax.swing.JTextField();
         entrarParametrobeta = new javax.swing.JButton();
@@ -81,8 +80,7 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Salida = new javax.swing.JTextArea();
         volverMenu1menu2 = new javax.swing.JButton();
-        Agregar2 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
@@ -127,10 +125,6 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel3.setText("Valores de simulación");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
-
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(escribirParametrobeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 40, -1));
 
@@ -157,35 +151,35 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
                 entrarNumerohormigasmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(entrarNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 200, -1));
+        jPanel1.add(entrarNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 200, -1));
 
         jLabel12.setText("Parametros obligatorios");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel7.setText("Parametros opcionales");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
-        entrarNumerodeciudadesmenu2.setText("Introducir número de ciudades");
+        entrarNumerodeciudadesmenu2.setText("Introducir número de Ciclos");
         entrarNumerodeciudadesmenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entrarNumerodeciudadesmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(entrarNumerodeciudadesmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
+        jPanel1.add(entrarNumerodeciudadesmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
 
         escribirNumerodeciudadesmenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 escribirNumerodeciudadesmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(escribirNumerodeciudadesmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 40, -1));
+        jPanel1.add(escribirNumerodeciudadesmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 40, -1));
 
         escribirNumerohormigasmenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 escribirNumerohormigasmenu2ActionPerformed(evt);
             }
         });
-        jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 40, -1));
+        jPanel1.add(escribirNumerohormigasmenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 40, -1));
 
         iniciarViajemenu2.setText("Iniciar viaje");
         iniciarViajemenu2.addActionListener(new java.awt.event.ActionListener() {
@@ -204,13 +198,13 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         jLabel13.setText("Antes de iniciar la simulación, es necesario introducir parametros. ");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 430, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 430, -1));
 
         Salida.setColumns(20);
         Salida.setRows(5);
         jScrollPane1.setViewportView(Salida);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 220, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 220, 250));
 
         volverMenu1menu2.setText("Volver a menú");
         volverMenu1menu2.addActionListener(new java.awt.event.ActionListener() {
@@ -220,19 +214,11 @@ public class Menu2IntroducirCiclosHormigas extends javax.swing.JFrame {
         });
         jPanel1.add(volverMenu1menu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -30, 650, 410));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setText("Valores de simulación");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        Agregar2.setText("Introducir número de ciclos");
-        Agregar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Agregar2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Agregar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/ANT CARD sunset.jpg"))); // NOI18N
-        jLabel14.setText("jLabel2");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-330, -20, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 550, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -264,10 +250,6 @@ this.contenedorValores.insertarHormiga(Integer.parseInt(this.escribirNumerohormi
     private void entrarNumerodeciudadesmenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarNumerodeciudadesmenu2ActionPerformed
 this.contenedorValores.insertarCiudad(Integer.parseInt(this.escribirNumerodeciudadesmenu2.getText()));
     }//GEN-LAST:event_entrarNumerodeciudadesmenu2ActionPerformed
-
-    private void Agregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Agregar2ActionPerformed
 
     private void iniciarViajemenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarViajemenu2ActionPerformed
         if(this.contenedorValores.recuperarParamObligatorioCiudad()==null || this.contenedorValores.recuperarParamObligatorioHormigas()==null){
@@ -345,7 +327,6 @@ new GUI.Menu1AgregarEliminarCargarIniciar(GUI.Menu1AgregarEliminarCargarIniciar.
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Agregar;
-    private javax.swing.JButton Agregar2;
     private javax.swing.JButton Eliminar;
     private javax.swing.JTextArea Salida;
     private javax.swing.JButton cargarGrafo;
@@ -364,7 +345,6 @@ new GUI.Menu1AgregarEliminarCargarIniciar(GUI.Menu1AgregarEliminarCargarIniciar.
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

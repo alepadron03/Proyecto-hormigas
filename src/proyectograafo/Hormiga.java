@@ -3,82 +3,92 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyectograafo;
-
-import java.util.Arrays;
-import proyectograafo.Ciudad;
-
+import EDD.*;
+import java.math.*;
+import java.util.Random;
 /**
  *
- * @author alexp
+ * @author CMGamer
  */
-public class Hormiga extends Grafo {
-    private Grafo grafo;
-    private Ciudad ciudadActual;
-// private ListaCaminos caminoRecorrido;
-    private Ciudad[] ciudadRecorrida;
+public class Hormiga{
+    
+    Ciudad actual;
+    Lista<String> ciudadesVisitadas;
+    Boolean llego;
 
-  
-
-    private int indiceCamino;
-    public float distancia;
-    public String ciudadesQuerecorrio;
-
-
-    public Hormiga(Ciudad primera, int CantidadCiudades) {
-        this.ciudadActual = primera;
-        this.ciudadRecorrida = new Ciudad[CantidadCiudades];
-        ciudadRecorrida[0] = primera;
+    public Hormiga(Grafo grafo) {
+        Ciudad actual = grafo.primero;
+        ciudadesVisitadas = new Lista();
+        llego = false;
     }
     
-    
+    public void calcularProbabilidad(){
+        double x = 0;
+        double y = 0;
+        double z = 0;
+        
+        Lista<Camino> caminosPosibles = new Lista();
+        
+        Camino caminosTomables = actual.lista.primero;
+        
+        while(caminosTomables != null){
+            Nodo<String> aux5 = ciudadesVisitadas.head;
+            while(aux5 != null){
+                if(!aux5.getData().equals(caminosTomables.destino.toString()))
+                    
+            }
+        }
+           
+        
 
-// Las simulaciones se podrán realizar con un mínimo de 4 ciudades y hasta un máximo de 20 ciudades.
-
-   public boolean comprobarCiudadHormiga(Ciudad ciudad){
-       for (int i = 0; i < ciudad; i++) {
-           if(ciudadRecorrida[i].dato.toString().equals(ciudad.dato.toString())){
-               System.out.println("Ya visitaste esta ciudad");
-               return false;
-           }
-         
-       }
-       return true;
-      
-       
-       
-   }
-   
-   public void agregarCiudadHormiga(Ciudad ciudad){
-      
-       if(comprobarCiudadHormiga(ciudad)){
-       }  
-       
-       
-   }
-
-    public Ciudad getCiudadActual() {
-        return ciudadActual;
-    }
-
-    public void setCiudadActual(Ciudad ciudadActual) {
-        this.ciudadActual = ciudadActual;
-    }
-
-    public Ciudad[] getCiudadRecorrida() {
-        return ciudadRecorrida;
-    }
-
-    public void setCiudadRecorrida(Ciudad[] ciudadRecorrida) {
-        this.ciudadRecorrida = ciudadRecorrida;
-    }
-
-    public int getIndiceCamino() {
-        return indiceCiudad;
-    }
-
-    public void setIndiceCamino(int indiceCamino) {
-        this.indiceCiudad = indiceCamino;
-    }
+        Camino aux = actual.lista.primero;
+        while(aux != null) {
+            x =+ aux.feromonas*Math.pow(aux.distancia, 2);
+            aux = aux.siguiente;
+        }
+        
+        Lista<Double> numeroCalculos = new Lista();
+        
+        Camino aux2 = actual.lista.primero;
+        
+        while (aux2 != null){
+            double valor = (aux.feromonas*Math.pow(aux.distancia, 2))/x;
+            y =+ valor;
+            numeroCalculos.addLast(valor);
+            aux2 = aux2.siguiente;
+        }
+        
+        Nodo<Double> aux3 = numeroCalculos.head;
+        
+        while(aux3 != null){
+            z =+ (aux3.getData()/y)*100;
+            aux3.setData(z);
+            aux3 = aux3.next;
+        }
+        
+        Random randomizador = new Random();
+        double probabilidad = randomizador.nextInt(100);
+        
+        Nodo<Double> aux4 = numeroCalculos.head;
+        while(aux4 != null){
+            if(probabilidad <= aux4.getData()){
+                z++;
+                break;
+            }else{
+                z++;
+                aux4 = aux4.next;
+            }
+        }
+        
+        
+                
+        
+        
+        
+        
+        
+        
+}
     
     
     

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyectograafo;
-
+import EDD.*;
 /**
  *
  * @author CMGamer
@@ -15,7 +15,7 @@ package proyectograafo;
 public class Grafo {
     public Ciudad primero;
     public Ciudad ultimo; 
-    public int cantidad; //actual_cities
+    public int cantidad; 
     
     public Grafo(){ //cambiado el int max
 
@@ -124,6 +124,71 @@ public class Grafo {
         }
     }
     
+    
+    public boolean existeConexion(Ciudad origen, Ciudad destino){
+        
+        if(origen == destino){
+            return true;
+        }
+        
+        
+        boolean visitado[] = new boolean[this.cantidad];
+        for (int i = 0; i < this.cantidad; i++) {
+            visitado[i] = false;
+        }
+
+        Lista<Ciudad> fila = new Lista();
+        visitado[obtenerIndiceCiudad(origen.dato)] = true;
+        fila.addFirst(origen);
+        
+        
+        while(!fila.isEmpty()){
+            Ciudad dato = fila.head.getData();
+            fila.deleteFirst();
+           
+            for (int i = 0; i <dato.lista.cantidad; i++) {
+                Camino dato2 = dato.lista.obtenerDatoIndice(i);
+                if(dato2.destino.toString().equals(destino.dato.toString()))
+                    return true;
+                
+                if(!visitado[obtenerIndiceCiudad(dato2.destino)]){
+                    visitado[obtenerIndiceCiudad(dato2.destino)] = true;
+                    fila.addLast(buscadorCiudad(dato2.destino));
+                }
+            }
+        }
+        return false;
+    }
+    
+    private Ciudad buscadorCiudad(Object dato){
+        if(dato == this.primero.dato){
+            return this.primero;
+        }else if(dato == this.ultimo.dato){
+            return this.ultimo;
+        }else{
+            Ciudad aux = this.primero;
+            while(!aux.dato.toString().equals(dato.toString())){
+                aux = aux.siguiente;
+            }
+            return aux;
+        }
+    }
+    
+    private int obtenerIndiceCiudad(Object dato){
+        if(dato.toString() == this.primero.dato){
+            return 0;
+        }else if(dato.toString() == this.ultimo.dato){
+            return this.cantidad-1;
+        }else{
+            int x = 0;
+            Ciudad aux = this.primero;
+            while(!dato.toString().equals(aux.dato.toString())){
+                aux = aux.siguiente;
+                x++;
+            }
+            return x;        
+        }
+    }
     
     public String toString(){
         String cadena = "";
